@@ -1,0 +1,422 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POS</title>
+    <link rel="stylesheet" href="header-content.css" />
+    <link rel="stylesheet" href="Dropleft.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <script src="DropMenu.js"></script> -->
+    <link rel="stylesheet" href="POS.css">
+
+  </head>
+  <style>
+    body{
+            background-color: rgb(215, 210, 210);
+            max-width: 1920px;
+            max-height: 1080px;
+            margin: 0;
+            padding: 0;
+           
+            overflow: hidden;
+        }
+        .body-app{
+            width: 1920px;
+            height: 1080px;
+            background-color: rgb(215, 210, 210);
+            
+        }
+        @media only screen and (min-width: 1440px){
+        .body-app{
+            width: 100%;
+            height: 1080px;
+            margin: auto;
+            padding: 0;
+       
+            background-color: rgb(215, 210, 210);
+        }
+        }
+          @media only screen and (max-width: 1920px){
+        .body-app{
+            width: 100%;
+            height: 1080px;
+            margin: auto;
+            padding: 0;
+         
+            
+        }
+}
+    
+   
+   
+    
+  
+    
+  </style>
+  <body>
+    <div class="body-app">
+      
+    
+    <div class="header">
+      <div class="logo">
+        <a href="Dashboard.html"><img
+          src="img/restaurant-logo.png"
+          alt=""
+          style="width: 80px; height: 80px; background-color: white;"
+        /></a>
+      </div>
+      <div class="logomenu">
+        <!-- ប្រើ Bottom click show menu -->
+
+        <!-- <button  style="border: none; background-color: white; width: 100px; height: 100px;"  class="menu-toggle" onclick="toggleMenujava()">
+          <img class="colorMenu"
+            src="icon/hamburger-button-computer-icons-menu-bar-line.png"
+            alt=""
+            style="width: 60px; height: 60px"
+          />
+        </button> -->
+      </div>
+
+      <div class="profile">
+        <a  class="a-dash" href="Login.html">
+          <img
+            src="img/images-modified.png"
+            alt=""
+            style="width: 75px; height: 70px"
+          />
+        </a>
+      </div>
+      <!-- <div class="bell">
+        <img class="colorMenu"
+          src="img/bell.png"
+          alt=""
+          style="width: 40px; height: 40px; padding: 25px"
+        />
+      </div> -->
+
+      <div class="dashboard">
+        <a href="Dashboard.html">
+          <div class="size-pos">Dashboard</div>
+        </a>
+      </div>
+    </div>
+    
+  
+  </div>
+
+
+
+<!-- Your Content -->
+<div class="main-contentjava" id="main-contentjava">
+      <div class="content">
+        <div class="content-left">
+
+          <div style="margin-top: 40px; width: 94%; margin-left: 20px; float: left;  margin-bottom: 20px;">
+            <input  class="team" style="width: 94%; height: 50px; border-radius: 10px;
+             border: 1px solid rgb(126, 133, 129);" type="text" value="Search..." >
+             <div style="float: right;"><img style="width: 40px; height: 40px; margin-top: 5px;" src="icon/icons8-add-user-50.png" alt=""></div>
+          </div>
+                <style>
+                table {
+                  width: 95%;
+                  border-collapse: collapse;
+                  margin-top: 90px;
+                  margin-left: auto;
+                  margin-right: auto;
+                }
+            
+                th, td {
+                  padding: 14px;
+                  text-align: center;
+                  /* border-bottom: 1px solid #ddd; */
+                  text-align: center;
+
+                }
+            
+                th {
+                  background-color: #f9f9f9;
+                  text-align: center;
+                }
+            
+                .actions i {
+                  cursor: pointer;
+                  margin: 0 5px;
+                }
+            
+                .button-group {
+                  margin-bottom: 20px;
+                  float: right;
+                }
+            
+                .button-group button {
+                  margin-right: 10px;
+                  padding: 15px 25px;
+                  border: none;
+                  border-radius: 30px;
+                  cursor: pointer;
+                  text-align: center;
+                }
+            
+                .filter { background-color: #e6f0ff; }
+                .pdf { border: 1px solid #28a745; color: #28a745; background-color: #eafaf1; }
+                .excel { border: 1px solid #dc3545; color: #dc3545; background-color: #fbeaea; }
+                .import { background-color: #007bff; color: white; }
+                .create { background-color: #6c4b3f; color: white; }
+            
+                .image-cell img {
+                  width: 90px;
+                  height: 90px;
+                  border-radius: 10px;
+                  box-shadow: 0px 2px 5px rgba(131, 124, 124, 0.165);
+                }
+            
+               
+                .team:hover{
+                  box-shadow: 0px 3px 5px rgba(82, 77, 77, 0.476);
+                  transition: 0.3s;
+                }
+               
+                input{
+                    width: 20px;
+                    height: 20px;
+                }
+                
+              </style>
+            </head>
+            <body>
+              <table>
+                <thead>
+                  <tr>
+                    <th style="background-color: #2fc077c5;">Product</th>
+                    <th style="background-color: #2fc077c5;">Price</th>
+                    <th style="background-color: #2fc077c5;">Qty</th>
+                    <th style="background-color: #2fc077c5;">Subtotal</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Amok fish in banana life</td>
+                    <td>$ 128.00</td>
+                    <td>1</td>
+                    <td>$ 128.00</td>
+                  </tr>
+                  <tr>
+                    <td>Coke</td>
+                    <td>$ 5.00</td>
+                    <td>2</td>
+                    <td>$ 10.00</td>
+                  </tr>
+                  <tr>
+                    <td>Milk</td>
+                    <td>$ 23.00</td>
+                    <td>1</td>
+                    <td>$ 23.00</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+              <style>
+                .payale{
+                  width: 95%;
+                  height: 50px;
+                  background-color: #09994a;
+                  color: white;
+                  margin-right: auto;
+                  margin-left: auto;
+                 margin-top: 200px;
+                  
+                }
+                center{
+                  padding-top: 15px;
+
+                }
+                .input-left{
+                  width: 98%;
+                  height: 50px;
+                 float: right;
+                }
+                .color-left-input{
+                  background-color: rgb(190, 193, 198);
+                }
+              </style>
+              <div class="payale"><center>Total Payable: $ 161.00</center></div>
+              <table style="margin-top: 0px;" border="0">
+                <tr>
+                  <td  style="width: 31.5%; text-align: left;">Tax</td>
+                  <td ></td>
+                  <td style="width: 31.5%; text-align: left;">Discound</td>
+                  <td></td>
+                  <td style="width: 31.5%; text-align: left;">Shipping</td>
+                  <td></td>
+                </tr>
+                <tr>
+                 <td style="padding: 0px;"><input class="input-left team" type="text"></td>
+                 <td class="color-left-input"><span >%</span></td>
+                 <td style="padding: 0px;"><input class="input-left team" type="text"></td>
+                 <td class="color-left-input"><span >$</span></td>
+                 <td style="padding: 0px;"><input class="input-left team" type="text"></td>
+                 <td class="color-left-input"><span >$</span></td>
+                </tr>
+              </table>
+              <style>
+                .button-left{
+                  width: 120px;
+                  height: 50px;
+                 
+                  border-radius: 60px;
+                  color: white;
+                 
+                }
+              </style>
+              <div style="width: 80%; height: 50px; margin-left: 20px; margin-top: 40px;">
+                <button class="button-left team" style="background-color: #f1071e; border: none;">
+                   <div style="float: left;"><img  style="width: 12px; height: 12px; margin-left: 15px;" src="icon/icons8-reset-48-2.png" alt=""></div>
+                   Reset
+                  </button>
+                  <button class="button-left team" style="background-color: #31c808; border: none; margin-left: 15px;">
+                    <div style="float: left;"><img  style="width: 12px; height: 12px; margin-left: 15px;" src="icon/icons8-pay-50.png" alt=""></div>
+                    Play Now
+                   </button>
+                   <button class="button-left team" style="background-color: #502b11; border: none; margin-left: 15px;">
+                    <div style="float: left;"><img  style="width: 12px; height: 12px; margin-left: 15px;" src="icon/icons8-sand-timer-50.png" alt=""></div>
+                    <span style="margin-right: 10px;">Draft</span>
+                   </button>
+              </div>
+              
+
+        </div>
+        <div class="content-right">
+          <div class="content-right-in">
+
+            <button class="team" style="text-align: center; width: 100%; height: 50px;  margin-top: 20px; border: 2px solid #007bff; color: #046133; background-color:#2fc077c5;">List of Category</button>
+            <style>
+              button{
+                border-radius: 10px;
+              
+              }
+            </style>
+
+            <div style="margin-top: 10px; width: 100%;">
+              <input  class="team" style="width: 100%; height: 50px; background-color: #dca0a6; border-radius: 10px; border: 1px solid rgba(99, 96, 96, 0.789);
+              " type="text" placeholder="Scan/Search Product by Code or Name">
+              
+            </div>
+            <style>
+              .scaniteam{
+                width: 100%;
+                border: 3px soild black;
+                height: 500px;
+                margin-top: 20px;
+              
+
+              }
+              .imgA{
+                width: 130px;
+                height: 130px;
+                border-radius: 10px;
+                box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.362);
+              }
+              .td-1{
+                padding: 0;
+                margin: auto;
+              }
+            
+            </style>
+            <div>
+              <table class="scaniteam" border="0">
+                <tr>
+                
+                <td class="td-1 "><img class="imgA" src="img/amok.jpg" alt="Amok fish">
+                  <p>Amok fish in banana life<br><span class="color-text-all">$ 128.00</span> </p>
+                </td>
+                <td class="td-1"><img class="imgA" src="img/coca.webp" alt="">
+                  <p>Coca Cola <br><span class="color-text-all"> $ 5.00</span></p>
+                </td>
+                <td class="td-1"><img class="imgA" src="img/Fanta.jpg" alt="">
+                  <p>Fanta <br><span class="color-text-all">$ 5.00</span> </p>
+                </td>
+              </tr>
+              <tr>
+                
+                <td class="td-1"><img class="imgA" src="img/sirloin-steak-recipe.jpg" alt="">
+                  <p>Steak <br><span class="color-text-all"> $ 25.00</span> </p>
+                </td>
+                <td class="td-1"><img class="imgA" src="img/burger.webp" alt="">
+                  <p>Burger <br><span class="color-text-all"> $ 25.00</span> </p>
+                </td>
+                <td class="td-1"><img class="imgA" src="img/delish-220517-dirty-shirley-cocktail-001-ab-web-1657145301.jpg.avif " alt="">
+                  <p>Cocktail <br><span class="color-text-all"> $ 100.00</span> </p>
+                </td>
+              </tr>
+             
+              </table>
+             
+            </div>
+            <style>
+              .next-page{
+                float: right;
+                width: auto;
+                height: 50px;
+                /* background-color: #28a745; */
+              
+                text-align: center;
+                margin-top: 30px;
+                margin-right: 40px;
+                
+              }
+              .img-next{
+                width: 50px;
+            
+                height: 50px;
+              }
+              #number{
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                border-radius: 50%;
+                /* border: 3px solid black; */
+              
+                
+              
+              
+              }
+              .button-next{
+                border: none;
+                background-color: none;
+                border-radius: 0px;
+                width: 50px;
+                height: 50px;
+                padding: 0px;
+                cursor: pointer;
+                background-color: rgb(185, 44, 44);
+                color: white
+          
+              }
+              .color-1{
+                filter: brightness(1) saturate(110%) invert(10%) sepia(80%) saturate(1000%)
+    hue-rotate(0deg);
+              }
+            </style>
+            
+            <table class="next-page" border="0" >
+              <tr>
+                <td style="padding: 3px;"><button style="border: none;" class=""><img class="img-next color-1"  src="icon/icons8-back-to-64.png" alt=""></button></td>
+
+                <td class="" style="padding: 3px;"><button class="button-next " id="number"><span >1</span></button></td>
+                <td style="padding: 3px;"><button class="" id="number"> 2</button></td>
+                <td style="padding: 3px;"><button style="border: none;" class=" "><img class="img-next "  src="icon/icons8-next-64-2.png" alt=""></button></td>
+              </tr>
+            </table>
+          
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+    <!-- JAVA -->
+ 
+  </body>
+</html>

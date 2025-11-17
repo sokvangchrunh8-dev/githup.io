@@ -1,0 +1,429 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Products</title>
+    <link rel="stylesheet" href="header-content.css" />
+    <link rel="stylesheet" href="Dropleft.css" />
+    <script src="Drop-Menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="Drop-Menu.js"></script>
+    <link rel="stylesheet" href="Body-web.css">
+    
+  </head>
+  <style>
+   
+    .footer {
+      width: 100%;
+      height: 250px;
+      border-radius: 15px 15px 0px 0px;
+      box-shadow: 2px 2px 5px rgb(88, 81, 81);
+      margin-top: 100px;
+     
+      background-color: rgb(18, 180, 66);
+      position: static;
+      width: calc(100%);
+      z-index: 0;
+      margin-left: 0px;
+    }
+  
+     
+
+  </style>
+  <body>
+    <div class="body-app">
+      
+    
+    <div class="header">
+      <div class="logo">
+        <a class="a-dash" href="Dashboard.html"><img 
+          src="img/restaurant-logo.png"
+          alt=""
+          style="width: 80px; height: 80px; background-color: white;"
+        />
+      </a>
+      </div>
+      <div class="logomenu">
+        <!-- ប្រើ Bottom click show menu -->
+
+        <button  style="border: none; background-color: white; width: 100px; height: 100px;"  class="menu-toggle" onclick="toggleMenujava()">
+          <img class="colorMenu"
+            src="icon/hamburger-button-computer-icons-menu-bar-line.png"
+            alt=""
+            style="width: 60px; height: 60px"
+          />
+        </button>
+      </div>
+
+      <div class="profile a-dash">
+        <a class="a-dash" href="Login.html">
+          <img  
+            src="img/images-modified.png"
+            alt=""
+            style="width: 75px; height: 70px"
+          />
+        </a>
+      </div>
+      <div class="bell">
+        <img class="colorMenu"
+          src="img/bell.png"
+          alt=""
+          style="width: 40px; height: 40px; padding: 25px"
+        />
+      </div>
+
+      <div class="pos">
+        <a href="POS.html">
+          <div class="size-pos">POS</div>
+        </a>
+      </div>
+    </div>
+    <!-- CONTENT------------------------------------------- -->
+<!-- CSS set size sizetogglemenu -->
+  <div class="sizetogglemenu"> 
+    <div class="sidebarjava" id="sidebarjava">
+      <div id="myDIV">
+                    
+                    
+        <button class="btn" onclick="toggleMenu('Dashboard', this)">
+          <a class="a-dash" href="Dashboard.html" style="color: black; text-decoration: none;">
+            <!-- <picture class=" mycolor btn-text "> -->
+            <img style="width: 60px; height: 60px;" src="icon/icons8-dashboard-100.png" > 
+            
+           Dashboard
+            
+          </picture>
+          </a>
+          <div id="Dashboard">
+          </div>
+      </button>
+        
+        
+        <button class="btn" onclick="toggleMenu('Products', this)">
+          
+            <!-- <picture class="mycolor btn-text "> -->
+              <img style="width: 60px; height: 60px;" src="icon/icons8-food-bar-100.png" > 
+              Products
+              
+            </picture>
+         
+        </button>
+        <div id="Products" class="dropdown-content">
+          <a href="Product Create.html"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-add-properties-80.png"> Create Product</a>
+          <a href="#All-Products"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-list-view-50.png">  All Products</a>
+          <a href="Category.html"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-category-50.png">  Category</a>
+        </div>
+
+        <button class="btn" onclick="toggleMenu('Peoples', this)">
+          <!-- <picture class="mycolor btn-text"> -->
+          <img style="width: 60px; height: 60px;" src="icon/icons8-people-100.png" > 
+          
+          Peoples
+        </picture>
+        </button>
+        <div id="Peoples" class="dropdown-content">
+          <a href="People-Customs.html"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-user-50.png"> Customers</a>
+          <a href="People-User.html"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-user-50.png"> Users</a>
+        </div>
+        <button class="btn" onclick="toggleMenu('Setting', this)">
+          <!-- <picture class="mycolor btn-text"> -->
+          <img style="width: 60px; height: 60px;" src="icon/icons8-setting-100.png" > 
+          
+          Setting
+        </picture>
+        </button>
+        <div id="Setting" class="dropdown-content">
+          <a href="System-Setting.html"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-system-setting-68.png"> System Settings</a>
+          <a href="POS-Setting.html"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-sell-80.png"> POS Settings</a>
+          <a href="#Setting"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-currency-exchange-50.png"> Currency</a>
+          <a href="#Setting"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-data-backup-50.png"> Backup</a>
+        </div>
+        
+        <button  class="btn" onclick="toggleMenu('Report', this)" >
+          <!-- <picture class="mycolor btn-text"> -->
+          <img style="width: 60px; height: 60px;" src="icon/icons8-report-100.png" > 
+          
+          Report
+        </picture>
+        </button>
+        <div id="Report" class="dropdown-content">
+          <a href="#Setting"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-report-50.png"> Sale Report</a>
+          <a href="#Setting"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-report-50.png"> Product Report</a>
+          <a href="#Setting"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-report-80-2.png"> Customer Report</a>
+          <a href="#Setting"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-report-80.png"> Top Selling </a>
+          <a href="#Setting"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-report-64.png"> Best Customers </a>
+          <a href="#Setting"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-report-80-2.png"> User Report </a>
+        </div>
+      </div>
+  </div>
+
+</div>
+
+<!-- Your Content -->
+<div class="main-contentjava" id="main-contentjava">
+    <div class="content" id="main-contentjava" >
+       
+            <div><span style="font-size: 20pt; padding:30px;">all Products</span></div>        
+            <div class="ruler">
+                <style>
+                  .ruler{
+                    width: 80%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    height: 2px;
+                    background-color: rgb(248, 242, 242);
+                  }
+                </style>
+              </div>
+              <style>
+                .form-size1{
+                    height: 570px;
+                    background-color: rgb(255, 255, 255);
+                    margin: auto;
+                    float: left;
+                    margin-top: 40px;
+                    margin-left: 30px;
+                    width: calc(96.5%);
+                    /* border-radius: 15px; */
+                    box-shadow: 2px 2px 5px rgb(88, 81, 81);
+                    position: relative;
+                }
+                .form-size1-in{
+                    height: 500px;
+                    /* background-color: rgb(255, 255, 255); */
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 20px;
+                    width: calc(95.5%);
+                    /* border-radius: 15px; */
+                    /* box-shadow: 2px 2px 5px rgb(88, 81, 81); */
+                }
+                ::placeholder{
+                    color: rgb(119, 126, 132);
+                    padding-left: 20px;
+                }
+                .form-size2{
+                    height: auto;                  
+                    margin: auto;
+                    float: right;
+                    margin-top: -2px;
+                    margin-left: 30px;
+                    width: calc(auto);
+                    position: relative;
+                   
+                }
+                .form-size3{
+                    height: auto;
+                   /* background-color: aquamarine; */
+                    margin: auto;
+                    float: left;
+                    margin-top: 5px;
+                    margin-left: 30px;
+                    width: calc(97%);
+                    position: relative;
+                   
+                }
+               
+              </style>
+             <div class="form-size1">
+                <div class="form-size1-in">
+                    <div style="padding: 30px;">
+                        <div style="float: left; margin-right: 20px; margin-top: 5px;" ><img width="40px" 
+                          height="40px" src="img/search.png"></div>
+                        <div  style="float: left;"><input  class="team" style="width: 250px; height: 50px; border-radius: 10px;
+                         border: 1px   ​solid rgb(106, 97, 97);  
+                        " type="text" placeholder="Search this table"></div>
+                    </div>
+                    <style>
+                    table {
+                      width: 100%;
+                      border-collapse: collapse;
+                    }
+                
+                    th, td {
+                      padding: 25px;
+                      text-align: center;
+                      border-bottom: 1px solid #ddd;
+                    }
+                
+                    th {
+                      background-color: #f9f9f9;
+                    }
+                
+                    .actions i {
+                      cursor: pointer;
+                      margin: 0 5px;
+                    }
+                
+                    .button-group {
+                      margin-bottom: 20px;
+                      float: right;
+                    }
+                
+                    .button-group button {
+                      margin-right: 10px;
+                      padding: 15px 25px;
+                      border: none;
+                      border-radius: 10px;
+                      cursor: pointer;
+                    }
+                
+                    .filter { background-color: #e6f0ff; }
+                    .pdf { border: 1px solid #28a745; color: #28a745; background-color: #eafaf1; }
+                    .excel { border: 1px solid #dc3545; color: #dc3545; background-color: #fbeaea; }
+                    .import { background-color: #007bff; color: white; }
+                    .create { background-color: #6c4b3f; color: white; }
+                
+                    .image-cell img {
+                      width: 80px;
+                      height: 80px;
+                      border-radius: 10px;
+                      box-shadow: 0px 2px 5px rgba(131, 124, 124, 0.165);
+                    }
+                
+                    .pagination {
+                      text-align: right;
+                      margin-top: 10px;
+                      font-size: 14px;
+                    }
+                
+                    .rows-selector {
+                      display: flex;
+                      align-items: center;
+                     
+                      gap: 5px;
+                    }
+                    .team:hover{
+                      box-shadow: 0px 3px 5px rgba(82, 77, 77, 0.476);
+                      transition: 0.3s;
+                    }
+                  </style>
+                </head>
+                <body>
+                
+                  <div class="button-group">
+                    <button class="filter team">🔍 Filter</button>
+                    <button class="pdf team">📄 PDF</button>
+                    <button class="excel team">📊 EXCEL</button>
+                    <button class="import team">⬆️ Import products</button>
+                    <button class="create team">＋ Create</button>
+                  </div>
+                
+                  <table>
+                    <thead>
+                      <tr>
+                        <th><input type="checkbox" /></th>
+                        <th>Image</th>
+                        <th>Type</th>
+                        <th>Name</th>
+                        <th>Code</th>
+                        <th>Brand</th>
+                        <th>Category</th>
+                        <th>Cost</th>
+                        <th>Price</th>
+                        <th>Unit</th>
+                        <th>Quantity</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><input type="checkbox" /></td>
+                        <td class="image-cell"><img  class="team" src="img/Coca-case.jpg" alt="Coca" /></td>
+                        <td>Service</td>
+                        <td>Coca</td>
+                        <td>89678000</td>
+                        <td>Siem Reap</td>
+                        <td>Soft Drink</td>
+                        <td>----</td>
+                        <td>25.00</td>
+                        <td>----</td>
+                        <td>----</td>
+                        <td class="actions">
+                          👁️ ✏️ ❌
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" /></td>
+                        <td class="image-cell"><img  class="team" src="img/amok.jpg" alt="Amok fish in banana life" /></td>
+                        <td>Single</td>
+                        <td>Amok fish in banana life</td>
+                        <td>123456</td>
+                        <td>Siem Reap</td>
+                        <td>Main Food</td>
+                        <td>100.00</td>
+                        <td>120.00</td>
+                        <td>Pack</td>
+                        <td>0 Pack</td>
+                        <td class="actions">
+                          👁️ ✏️ ❌
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <style>
+                    .pagination {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 15px;
+                        font-size: 16pt;
+                        float: right;
+                    }
+                        .rows-selector {
+                        display: flex;
+                        gap: 5px;
+                        float: left;
+                        font-size: 16pt; margin-top: 20px;
+                        
+                    }
+                    select{
+                        background-color: #ab9a9456;
+                        width: auto;
+                        height: auto;
+                        border-radius: 5px;
+                        font-size: 20px;
+                    }
+                </style>
+                  <div class="rows-selector">
+                    Rows per page:
+                    <select>
+                      <option>10</option>
+                      <option>25</option>
+                      <option>50</option>
+                    </select>
+                  </div>
+                
+                  <div class="pagination">
+                    1 - 2 of 2 &nbsp;&nbsp; ‹ prev next ›
+                  </div>
+             </div>
+             <!-- <img width="50px" height="50px" src="img/Coca-case.jpg" alt=""> -->
+              <!-- Footer -->
+             <div class="footer">
+              <div><p style="padding-top:20px ; text-align: center; font-size: 16pt;">Assigment Restaurant Manager</p></div>
+              <div class="ruler">
+                <style>
+                  .ruler{
+                    width: 96.5%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 10px;
+                    height: 2px;
+                    margin-left: 30px;
+                    background-color: rgb(150, 146, 146);
+                  }
+                </style>
+              </div>
+              
+
+              <div><p style=" text-align: center; font-size: 16pt; margin-top: 10px;">2025 Developed by Chrunh Sokvang and Deng Bopha</p></div>
+              <div><p style=" text-align: center; font-size: 16pt; margin-top: -10px;">All rights reserved - v 1.0</p></div>
+             </div>
+      
+    </div>
+  </div> 
+
+    <!-- JAVA -->
+   
+  </body>
+</html>

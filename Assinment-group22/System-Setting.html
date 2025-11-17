@@ -1,0 +1,422 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System Setting</title>
+    <link rel="stylesheet" href="header-content.css" />
+    <link rel="stylesheet" href="Dropleft.css" />
+    <script src="Drop-Menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="Drop-Menu.js"></script>
+    <link rel="stylesheet" href="body-web.css">
+    
+  </head>
+  <style>
+  
+    .footer {
+      width: 100%;
+      height: 250px;
+      border-radius: 15px 15px 0px 0px;
+      box-shadow: 2px 2px 5px rgb(88, 81, 81);
+      margin-top: 90px;
+     margin-left: 0px;
+      background-color: rgb(18, 180, 66);
+      position: absolute;
+      width: calc(100%);
+      z-index: 0;
+     
+    }
+  
+       
+
+  </style>
+  <body>
+    <div class="body-app">
+      
+    
+    <div class="header">
+      <div class="logo">
+        <a href="Dashboard.html"><img 
+          src="img/restaurant-logo.png"
+          alt=""
+          style="width: 80px; height: 80px; background-color: white;"
+        />
+      </a>
+      </div>
+      <div class="logomenu">
+        <!-- ប្រើ Bottom click show menu -->
+
+        <button  style="border: none; background-color: white; width: 100px; height: 100px;"  class="menu-toggle" onclick="toggleMenujava()">
+          <img class="colorMenu"
+            src="icon/hamburger-button-computer-icons-menu-bar-line.png"
+            alt=""
+            style="width: 60px; height: 60px"
+          />
+        </button>
+      </div>
+
+      <div class="profile">
+        <a class="a-dash" href="Login.html">
+          <img
+            src="img/images-modified.png"
+            alt=""
+            style="width: 75px; height: 70px"
+          />
+        </a>
+      </div>
+      <div class="bell">
+        <img class="colorMenu"
+          src="img/bell.png"
+          alt=""
+          style="width: 40px; height: 40px; padding: 25px"
+        />
+      </div>
+
+      <div class="pos">
+        <a href="POS.html">
+          <div class="size-pos">POS</div>
+        </a>
+      </div>
+    </div>
+    <!-- CONTENT------------------------------------------- -->
+<!-- CSS set size sizetogglemenu -->
+  <div class="sizetogglemenu"> 
+    <div class="sidebarjava" id="sidebarjava">
+      <div id="myDIV">
+                    
+                    
+        <button class="btn" onclick="toggleMenu('Dashboard', this)">
+          <a  class="a-dash" href="Dashboard.html" style="color: black; text-decoration: none;">
+            <!-- <picture class=" mycolor btn-text "> -->
+            <img style="width: 60px; height: 60px;" src="icon/icons8-dashboard-100.png" > 
+            
+           Dashboard
+            
+          </picture>
+          </a>
+          <div id="Dashboard">
+          </div>
+      </button>
+        
+        
+        <button class="btn" onclick="toggleMenu('Products', this)">
+          
+            <!-- <picture class="mycolor btn-text "> -->
+              <img style="width: 60px; height: 60px;" src="icon/icons8-food-bar-100.png" > 
+              Products
+              
+            </picture>
+         
+        </button>
+        <div id="Products" class="dropdown-content">
+          <a href="Product Create.html"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-add-properties-80.png">
+             Create Product</a>
+          <a href="All Product.html"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-list-view-50.png">  All Products</a>
+          <a href="Category.html"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-category-50.png">  Category</a>
+        </div>
+
+
+        <button class="btn" onclick="toggleMenu('Peoples', this)">
+          <!-- <picture class="mycolor btn-text"> -->
+          <img style="width: 60px; height: 60px;" src="icon/icons8-people-100.png" > 
+          
+          Peoples
+        </picture>
+        </button>
+        <div id="Peoples" class="dropdown-content">
+          <a href="People-Customs.html"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-user-50.png"> Customers</a>
+          <a href="People-User.html"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-user-50.png"> Users</a>
+        </div>
+        <button class="btn" onclick="toggleMenu('Setting', this)">
+          <!-- <picture class="mycolor btn-text"> -->
+          <img style="width: 60px; height: 60px;" src="icon/icons8-setting-100.png" > 
+          
+          Setting
+        </picture>
+        </button>
+        <div id="Setting" class="dropdown-content">
+          <a href="System-Setting.html"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-system-setting-68.png"> System Settings</a>
+          <a href="POS-Setting.html"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-sell-80.png"> POS Settings</a>
+          <a href="#Setting"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-currency-exchange-50.png"> Currency</a>
+          <a href="#Setting"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-data-backup-50.png"> Backup</a>
+        </div>
+        
+        <button  class="btn" onclick="toggleMenu('Report', this)" >
+          <!-- <picture class="mycolor btn-text"> -->
+          <img style="width: 60px; height: 60px;" src="icon/icons8-report-100.png" > 
+          
+          Report
+        </picture>
+        </button>
+        <div id="Report" class="dropdown-content">
+          <a href="#Setting"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-report-50.png"> Sale Report</a>
+          <a href="#Setting"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-report-50.png"> Product Report</a>
+          <a href="#Setting"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-report-80-2.png"> Customer Report</a>
+          <a href="#Setting"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-report-80.png"> Top Selling </a>
+          <a href="#Setting"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-report-64.png"> Best Customers </a>
+          <a href="#Setting"><img style="height: 30px; width: 30px; margin-right: 10px;" src="icon/icons8-report-80-2.png"> User Report </a>
+        </div>
+      </div>
+  </div>
+
+</div>
+
+<!-- Your Content -->
+<div class="main-contentjava" id="main-contentjava">
+    <div class="content" id="main-contentjava" >
+       
+            <div><span style="font-size: 20pt; padding:30px;">System Setting</span></div>        
+            <div class="ruler">
+                <style>
+                  .ruler{
+                    width: 80%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    height: 2px;
+                    background-color: rgb(144, 138, 138);
+                  }
+                </style>
+              </div>
+              <style>
+                .form-size1{
+                    height: 570px;
+                    background-color: rgb(255, 255, 255);
+                    margin: auto;
+                    float: left;
+                    margin-top: 40px;
+                    margin-left: 30px;
+                    width: calc(96.5%);
+                    /* border-radius: 15px; */
+                    box-shadow: 2px 2px 5px rgb(88, 81, 81);
+                    position: relative;
+                }
+                .form-size1-in{
+                    height: 500px;
+                    /* background-color: rgb(255, 255, 255); */
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 20px;
+                    width: calc(95.5%);
+                    /* border-radius: 15px; */
+                    /* box-shadow: 2px 2px 5px rgb(88, 81, 81); */
+                }
+                ::placeholder{
+                    color: rgb(119, 126, 132);
+                    padding-left: 20px;
+                }
+                .form-size2{
+                    height: auto;
+                   
+                    margin: auto;
+                    float: right;
+                    margin-top: -2px;
+                    margin-left: 30px;
+                    width: calc(auto);
+                    position: relative;
+                   
+                }
+                .form-size3{
+                    height: auto;
+                   /* background-color: aquamarine; */
+                    margin: auto;
+                    float: left;
+                    margin-top: 5px;
+                    margin-left: 30px;
+                    width: calc(97%);
+                    position: relative;
+                   
+                }
+               
+              </style>
+             <div class="form-size1">
+                <div class="form-size1-in">
+                  
+                  <table border="0">
+                    <style>
+                    .form-row {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 20px;
+                        margin-bottom: 20px;
+                    }
+                    .form-group {
+                        flex: 1;
+                        min-width: 200px;
+                    }
+                    label {
+                        display: block;
+                        font-size: 14px;
+                        color: #333;
+                        margin-bottom: 5px;
+                    }
+                    input[type="text"],
+                    select {
+                        width: 100%;
+                        padding: 8px;
+                        border: 1px solid #ddd;
+                        border-radius: 4px;
+                        font-size: 14px;
+                        box-sizing: border-box;
+                    }
+                    .checkbox-group {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
+                    .file-upload {
+                        border: 1px dashed #ddd;
+                        padding: 10px;
+                        text-align: center;
+                        border-radius: 4px;
+                    }
+                    .file-upload label {
+                        color: #666;
+                        cursor: pointer;
+                    }
+                    .submit-btn {
+                        background-color: #8B4513;
+                        color: #fff;
+                        border: none;
+                        padding: 10px 20px;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        font-size: 14px;
+                        float: left;
+                    }
+                    .submit-btn:hover {
+                        background-color: #723a0f;
+                    }
+                </style>
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="default-currency">DEFAULT CURRENCY *</label>
+                                <select class="select" id="default-currency">
+                                    <option>US Dollar</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="default-email">DEFAULT EMAIL *</label>
+                                <input class="input" type="text" id="default-email" value="admin@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="logo">CHANGE LOGO</label>
+                                <div class="file-upload">
+                                    <label for="logo">No file selected</label>
+                                    <input type="file" id="logo" style="display: none;">
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="company-name">COMPANY NAME *</label>
+                                <input type="text" id="company-name" value="Bee Coffee Shop">
+                            </div>
+                            <div class="form-group">
+                                <label for="company-phone">COMPANY PHONE *</label>
+                                <input type="text" id="company-phone" value="6319596770">
+                            </div>
+                            <div class="form-group">
+                                <label for="developed-by">DEVELOPED BY *</label>
+                                <input type="text" id="developed-by" value="Bee Coffee Shope">
+                            </div>
+                        </div>
+            
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="footer">FOOTER *</label>
+                                <input type="text" id="footer" value="STOCKY - ULTIMATE INVENTORY WITH POS">
+                            </div>
+                            <div class="form-group">
+                                <label for="default-language">DEFAULT LANGUAGE *</label>
+                                <select id="default-language">
+                                    <option>English</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="default-customer">DEFAULT CUSTOMER</label>
+                                <select id="default-customer">
+                                    <option>walk-in-customer</option>
+                                </select>
+                            </div>
+                        </div>
+            
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="default-warehouse">DEFAULT WAREHOUSE</label>
+                                <select id="default-warehouse">
+                                    <option selected disabled>Select Warehouse</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="default-sms">DEFAULT SMS GATEWAY</label>
+                                <select id="default-sms">
+                                    <option>twilio</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="time-zone">TIME ZONE</label>
+                                <select id="time-zone">
+                                    <option>UTCGMT+00:00 - UTC</option>
+                                </select>
+                            </div>
+                        </div>
+            
+                        <div class="form-row" >
+                            <div class="form-group">
+                                <label for="address">ADDRESS *</label>
+                               
+                                  <textarea style="height: 80px; width: 100%;" name="" id="address">301 Siem Reap, Cambodia</textarea>
+                            </div>
+                        </div>
+            
+                        <div style="float: left;" class="form-row">
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="create-quotation">
+                                <label for="create-quotation">invoice Footer</label>
+                            </div>
+                        </div>
+                        
+                        <div style="float: left;" class="form-row">
+                            <div class="form-group checkbox-group">
+                                <input  type="checkbox" id="create-quotation">
+                                <label for="create-quotation">Create Quotation with Stock</label>
+                            </div>
+                        </div>
+                        <br><br><br>
+                        <div style="float: left;">
+                        <button  type="submit" class="submit-btn"><img src="" alt="">SUBMIT</button>
+                      </div>
+                    </form>
+                  </table>
+            </div>
+              <!-- Footer -->
+             <div class="footer">
+              <div><p style="padding-top:30px ; text-align: center; font-size: 16pt;">Assigment Restaurant Manager</p></div>
+              <div class="ruler">
+                <style>
+                  .ruler{
+                    width: 96.5%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 10px;
+                    height: 2px;
+                    margin-left: 30px;
+                    background-color: rgb(245, 244, 244);
+                  }
+                </style>
+              </div>
+              
+
+              <div><p style=" text-align: center; font-size: 16pt; margin-top: 10px;">2025 Developed by Chrunh Sokvang and Deng Bopha</p></div>
+              <div><p style=" text-align: center; font-size: 16pt; margin-top: -10px;">All rights reserved - v 1.0</p></div>
+             </div>
+      
+    </div>
+  </div> 
+
+    <!-- JAVA -->
+    
+  </body>
+</html>
